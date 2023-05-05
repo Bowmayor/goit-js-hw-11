@@ -41,7 +41,7 @@ searchBox.addEventListener(
       } else {
         clearMarkup();
       }
-    });
+    }).catch(() => { clearMarkup(); });
   }, 300)
 );
 
@@ -53,6 +53,7 @@ function clearMarkup(element = null) {
     countryInfo.innerHTML = '';
   }
 }
+
 
 function renderCountryList(countries) {
   const markup = countries
